@@ -33,7 +33,7 @@ export function WorkerRequestsPage() {
                 <div className="flex gap-2">
                   <button
                     className="btn btn-primary text-xs flex-1 justify-center"
-                    onClick={() => { if (user) { approveWorkerRequest(req.id, user.id); toast.success('Funds approved') }}}
+                    onClick={() => { if (user) { approveWorkerRequest(req.id, user.id, req.amountRequested); toast.success('Funds approved') }}}
                   >
                     Approve
                   </button>
