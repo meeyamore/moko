@@ -23,7 +23,7 @@ export function CategoriesPage() {
 
   const handleToggle = (id: string, name: string, isActive: boolean) => {
     if (!isCeo && !isActive) { toast.error('Only the CEO can reactivate categories'); return }
-    toggleCategory(id)
+    toggleCategory(id, isActive)
     toast.success(isActive ? `"${name}" deactivated` : `"${name}" reactivated`)
   }
 
